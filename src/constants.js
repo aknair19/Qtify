@@ -1,0 +1,1 @@
+export const BACKENDAPI_ENDPOINT="https://qtify-backend-labs.crio.do/albums"
