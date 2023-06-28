@@ -7,7 +7,7 @@ const AlbumCollections = ({ data, type }) => {
       <RiLoaderFill />
     </div>
   ) : (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col gap-4 w-full py-4">
       <CardContainer>
         <TopAlbums data={data} title={"Top Albums"} type={type} />
       </CardContainer>

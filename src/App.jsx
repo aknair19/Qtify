@@ -5,12 +5,13 @@ import HeroComponent from "./components/HeroComponent";
 import Navbar from "./components/Navbar";
 import { BACKENDAPI_ENDPOINT } from "./constants";
 import AlbumCollections from "./components/AlbumCollections";
+import SongsComponent from "./components/SongsComponent";
 function App() {
   const [data, setData] = useState(null);
 
   const getData = async () => {
     try {
-      const res = await axios.get(`${BACKENDAPI_ENDPOINT}/top`);
+      const res = await axios.get(`${BACKENDAPI_ENDPOINT}/albums/top`);
       setData(res?.data);
     } catch (error) {
       console.error(error);
@@ -22,10 +23,11 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <Navbar />
       <HeroComponent />
-      <AlbumCollections data={data} type='albums' />
+      <AlbumCollections data={data} type="albums" />
+      <SongsComponent />
     </div>
   );
 }

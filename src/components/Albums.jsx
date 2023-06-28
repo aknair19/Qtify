@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "./card";
 import { FcCollapse } from "react-icons/fc";
-import Carousel from "./Carousel/Carousel";
+
 import Slider from "./Slider";
 const Albums = ({ data, type, title }) => {
   const [show, setShow] = useState(false);
